@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
+import { actions } from "../store/actions/frutas.action";
+
 export function Fruta({ fruta }) {
+  const dispatch = useDispatch();
+
+  function removerFruta() {
+    dispatch(actions.remover(fruta));
+  }
+
   return (
-    <div>
+    <div className="fruta">
       <ul>
         <li>
           <strong>Fruta: </strong> {fruta.nome}
@@ -10,7 +19,7 @@ export function Fruta({ fruta }) {
         </li>
       </ul>
 
-      <button onClick={() => console.log("Remover fruta")}>Remover</button>
+      <button onClick={removerFruta}>&times;</button>
     </div>
   );
 }

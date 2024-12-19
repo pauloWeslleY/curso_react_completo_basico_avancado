@@ -1,10 +1,10 @@
-import { ListaFrutas } from "./_components/lista-frutas";
-import "./App.css";
+import { AdicionarCliente } from "./_components/adicionar-cliente";
+import "./styles/adicionar-cliente.css";
 
 export function App() {
   return (
-    <div className="App">
-      <ListaFrutas />
+    <div className="container">
+      <AdicionarCliente />
     </div>
   );
 }

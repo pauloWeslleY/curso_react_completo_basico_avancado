@@ -1,11 +1,9 @@
+import { useSelector } from "react-redux";
 import { AdicionaFruta } from "./adicionar-fruta";
 import { Fruta } from "./fruta";
 
 export function ListaFrutas() {
-  const frutas = [
-    { id: 1, nome: "Abacaxi", quantidade: 5 },
-    { id: 2, nome: "Maçã", quantidade: 12 },
-  ];
+  const frutas = useSelector((state) => state.frutas.frutas);
 
   return (
     <>
